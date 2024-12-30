@@ -9,10 +9,16 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "Starting server..."
-php artisan serve --host=0.0.0.0 --port=8000 &
-
+php artisan serve --host=0.0.0.0 --port=8000 --no-reload &
+sleep 5
 echo "Running migrations..."
 php artisan migrate --force
+
+# echo "Starting server..."
+# php artisan serve --host=0.0.0.0 --port=8000 &
+
+# echo "Running migrations..."
+# php artisan migrate --force
 
 # echo "Running migrations..."
 # php artisan migrate --force
