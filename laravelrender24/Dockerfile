@@ -1,6 +1,8 @@
 FROM richarvey/nginx-php-fpm:3.1.6
 
 COPY . .
+#Added port for laravel
+EXPOSE 8000
 
 # Image config
 ENV SKIP_COMPOSER 1
